@@ -114,16 +114,21 @@
         {% endif %}
 
         {% if section.settings.button_label != blank %}
-          <a
-            class="bloomy-hero-banner__button"
-            {% if section.settings.button_link != blank %}
+          {% if section.settings.button_link != blank %}
+            <a
+              class="bloomy-hero-banner__button"
               href="{{ section.settings.button_link }}"
-            {% else %}
+            >
+              {{ section.settings.button_label | escape }}
+            </a>
+          {% else %}
+            <span
+              class="bloomy-hero-banner__button"
               aria-disabled="true"
-            {% endif %}
-          >
-            {{ section.settings.button_label | escape }}
-          </a>
+            >
+              {{ section.settings.button_label | escape }}
+            </span>
+          {% endif %}
         {% endif %}
       </div>
 
@@ -222,13 +227,13 @@
     {
       "type": "text",
       "id": "button_label",
-      "label": "CTA label",
+      "label": "Button label",
       "default": "SHOP BESTSELLERS"
     },
     {
       "type": "url",
       "id": "button_link",
-      "label": "CTA link"
+      "label": "Button link"
     }
   ],
   "blocks": [

@@ -17,7 +17,12 @@
       {% for block in section.blocks %}
         {% liquid
           assign fetch_priority = 'auto'
+          assign image_alt = block.settings.image_alt | strip
           assign loading = 'lazy'
+
+          if image_alt == blank and block.settings.banner_image != blank
+            assign image_alt = block.settings.banner_image.alt
+          endif
 
           if section.index == 1 and forloop.first
             assign fetch_priority = 'high'
@@ -40,7 +45,7 @@
                   sizes: '(min-width: 750px) calc((100vw - 64px) / 3), calc(100vw - 40px)',
                   loading: loading,
                   fetchpriority: fetch_priority,
-                  alt: block.settings.banner_image.alt
+                  alt: image_alt
               }}
             {% else %}
               {{ 'hero-apparel-1' | placeholder_svg_tag: 'bloomy-stage-infocards__image bloomy-stage-infocards__placeholder' }}
@@ -92,12 +97,18 @@
   "blocks": [
     {
       "type": "card",
-      "name": "Card",
+      "name": "Stage card",
       "settings": [
         {
           "type": "image_picker",
           "id": "banner_image",
           "label": "Banner image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text",
+          "info": "Optional. Uses the uploaded image alt text when left empty."
         },
         {
           "type": "text",
@@ -123,7 +134,7 @@
   "presets": [
     {
       "name": "Bloomy Stage Infocards",
-      "category": "Text",
+      "category": "t:categories.text",
       "settings": {
         "heading": "Built for every stage."
       },

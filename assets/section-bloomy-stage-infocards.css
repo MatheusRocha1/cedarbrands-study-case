@@ -5,7 +5,7 @@
 .bloomy-stage-infocards {
   padding-top: 48px;
   padding-bottom: 48px;
-  font-family: var(--font-paragraph--family);
+  font-family: var(--font-paragraph--family), sans-serif;
   color: #212121;
 }
 
@@ -41,7 +41,6 @@
 }
 
 .bloomy-stage-infocards__media {
-  /* height: 14rem; */
   background: #ead8c4;
 }
 
@@ -86,7 +85,7 @@
 }
 
 .bloomy-stage-infocards__description {
-  margin-top: .625rem;
+  margin-top: 0.625rem;
   color: #212121;
   font-size: 16px;
   font-weight: 300;
@@ -119,15 +118,11 @@
     max-width: calc((100% - 4rem) / 3);
   }
 
-  .bloomy-stage-infocards__media {
-    /* height: 14.375rem; */
-  }
-
   .bloomy-stage-infocards__content {
     padding: 30px 28px 32px;
   }
 
   .bloomy-stage-infocards__description {
-    font-size: 1.25rem
+    font-size: 1.25rem;
   }
 }

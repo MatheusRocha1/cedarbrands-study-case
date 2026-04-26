@@ -57,23 +57,28 @@
     {% endif %}
 
     {% if section.settings.button_label != blank %}
-      <a
-        class="bloomy-purposeful-play-banner__button"
-        {% if section.settings.button_link != blank %}
+      {% if section.settings.button_link != blank %}
+        <a
+          class="bloomy-purposeful-play-banner__button"
           href="{{ section.settings.button_link }}"
-        {% else %}
+        >
+          {{ section.settings.button_label | escape }}
+        </a>
+      {% else %}
+        <span
+          class="bloomy-purposeful-play-banner__button"
           aria-disabled="true"
-        {% endif %}
-      >
-        {{ section.settings.button_label | escape }}
-      </a>
+        >
+          {{ section.settings.button_label | escape }}
+        </span>
+      {% endif %}
     {% endif %}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "Bloomy Purpose Banner",
+  "name": "Bloomy Purposeful Play",
   "tag": "section",
   "class": "shopify-section--bloomy-purposeful-play-banner",
   "disabled_on": {
@@ -123,7 +128,7 @@
   ],
   "presets": [
     {
-      "name": "Bloomy Purpose Banner",
+      "name": "Bloomy Purposeful Play",
       "category": "t:categories.banners"
     }
   ]

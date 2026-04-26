@@ -1,5 +1,5 @@
 .bloomy-hero-banner {
-  font-family: 'Poppins', var(--font-paragraph--family), sans-serif;
+  font-family: var(--font-paragraph--family), sans-serif;
 }
 
 .bloomy-hero-banner__frame {
@@ -79,12 +79,10 @@
 }
 
 .bloomy-hero-banner__description {
-  /* max-width: 16ch; */
   margin-top: clamp(1.125rem, 2.2vw, 1.75rem);
   font-size: 28px;
   line-height: 0.95;
   font-weight: 500;
-  /* letter-spacing: -0.04em; */
 }
 
 .bloomy-hero-banner__button {
@@ -92,7 +90,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 1.5625rem;
-  padding: .8125rem 1.5rem;
+  padding: 0.8125rem 1.5rem;
   border-radius: 3.125rem;
   background: #ff723f;
   color: #fcf5ea;
@@ -148,14 +146,12 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-end;
-    gap: 1.5rem;
     gap: 80px;
     padding: 20px;
   }
 
   .bloomy-hero-banner__content {
     align-self: flex-start;
-    /* max-width: min(19rem, 100%); */
     max-width: 100%;
     margin-top: 2.5rem;
   }
@@ -183,12 +179,11 @@
   .bloomy-hero-banner__button {
     margin-top: 1.25rem;
     font-size: 24px;
-    line-height: 1
+    line-height: 1;
   }
 
   .bloomy-hero-banner__attributes {
     gap: 0.75rem;
-    /* margin-top: auto; */
     width: 100%;
   }
 
@@ -197,7 +192,6 @@
   }
 
   .bloomy-hero-banner__attribute-label {
-    /* font-size: clamp(1rem, 4.9vw, 1.45rem); */
     font-size: 16px;
   }
 
@@ -206,7 +200,6 @@
     height: 1.25rem;
   }
 }
-
 
 @media screen and (max-width: 350px) {
   .bloomy-hero-banner__heading {

@@ -5,7 +5,7 @@
 .bloomy-comparison-table {
   padding-top: 48px;
   padding-bottom: 48px;
-  font-family: var(--font-paragraph--family);
+  font-family: var(--font-paragraph--family), sans-serif;
   color: #212121;
 }
 
@@ -37,7 +37,7 @@
   padding: 1.25rem;
   border-bottom: 1px solid rgb(33 33 33 / 0.12);
   text-align: left;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .bloomy-comparison-table__table th {

@@ -1,0 +1,126 @@
+.bloomy-purposeful-play-banner {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+}
+
+.bloomy-purposeful-play-banner__media,
+.bloomy-purposeful-play-banner__content {
+  flex: 1 1 50%;
+}
+
+.bloomy-purposeful-play-banner__media {
+  min-height: 16.5rem;
+}
+
+.bloomy-purposeful-play-banner__image,
+.bloomy-purposeful-play-banner__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bloomy-purposeful-play-banner__image {
+  object-fit: cover;
+}
+
+.bloomy-purposeful-play-banner__placeholder {
+  background: #e6d8c7;
+}
+
+.bloomy-purposeful-play-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;
+  padding: 2.5rem 1.75rem;
+  background-color: #eedcc3;
+  background-image: radial-gradient(circle at center, rgb(255 255 255 / 0.34) 0%, rgb(255 255 255 / 0) 72%);
+  color: #212121;
+  text-align: center;
+  font-family: 'Poppins', var(--font-paragraph--family), sans-serif;
+}
+
+.bloomy-purposeful-play-banner__heading,
+.bloomy-purposeful-play-banner__lead,
+.bloomy-purposeful-play-banner__body {
+  margin: 0;
+}
+
+.bloomy-purposeful-play-banner__heading {
+  max-width: 10ch;
+  font-size: clamp(3rem, 14vw, 3.75rem);
+  line-height: 0.9;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.bloomy-purposeful-play-banner__lead {
+  max-width: 16ch;
+  font-size: clamp(1.5rem, 6.5vw, 1.875rem);
+  line-height: 0.94;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.bloomy-purposeful-play-banner__body {
+  max-width: 25ch;
+  font-size: clamp(1rem, 3.4vw, 1.125rem);
+  line-height: 1.15;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.bloomy-purposeful-play-banner__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1875rem;
+  padding: 0.8125rem 1.5rem;
+  border-radius: 999px;
+  background: #ff723f;
+  color: #fffaf5;
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  line-height: 1;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.bloomy-purposeful-play-banner__button:hover {
+  background: #f76531;
+}
+
+@media screen and (min-width: 750px) {
+  .bloomy-purposeful-play-banner {
+    flex-direction: row;
+    min-height: 31.625rem;
+  }
+
+  .bloomy-purposeful-play-banner__media {
+    min-height: auto;
+  }
+
+  .bloomy-purposeful-play-banner__content {
+    align-items: flex-start;
+    padding: 3rem clamp(2.5rem, 5vw, 4.5rem);
+    text-align: left;
+  }
+
+  .bloomy-purposeful-play-banner__heading {
+    max-width: 9ch;
+    font-size: clamp(3.75rem, 4.8vw, 4.25rem);
+  }
+
+  .bloomy-purposeful-play-banner__lead {
+    max-width: 18ch;
+    font-size: clamp(1.75rem, 2.4vw, 2rem);
+  }
+
+  .bloomy-purposeful-play-banner__body {
+    max-width: 29ch;
+  }
+}

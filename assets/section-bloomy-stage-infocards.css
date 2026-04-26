@@ -1,0 +1,124 @@
+.bloomy-stage-infocards__background {
+  background: #fcf5ea;
+}
+
+.bloomy-stage-infocards {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: var(--font-paragraph--family);
+  color: #212121;
+}
+
+.bloomy-stage-infocards__heading,
+.bloomy-stage-infocards__card-title,
+.bloomy-stage-infocards__subtitle,
+.bloomy-stage-infocards__description {
+  margin: 0;
+}
+
+.bloomy-stage-infocards__heading {
+  text-align: center;
+  color: #212121;
+  font-size: clamp(2.75rem, 8vw, 4rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+  margin-bottom: 2rem;
+}
+
+.bloomy-stage-infocards__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.bloomy-stage-infocards__card {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.bloomy-stage-infocards__media {
+  height: 224px;
+  background: #ead8c4;
+}
+
+.bloomy-stage-infocards__image,
+.bloomy-stage-infocards__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bloomy-stage-infocards__image {
+  object-fit: cover;
+}
+
+.bloomy-stage-infocards__placeholder {
+  fill: #d3b79b;
+  background: #ead8c4;
+}
+
+.bloomy-stage-infocards__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.bloomy-stage-infocards__card-title {
+  color: #212121;
+  font-size: clamp(2rem, 5vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.bloomy-stage-infocards__subtitle {
+  margin-top: 0.125rem;
+  color: #be783e;
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.bloomy-stage-infocards__description {
+  margin-top: 0.75rem;
+  max-width: 18ch;
+  color: #212121;
+  font-size: 1.125rem;
+  line-height: 1.12;
+}
+
+@media screen and (min-width: 750px) {
+  .bloomy-stage-infocards {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .bloomy-stage-infocards__heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .bloomy-stage-infocards__card {
+    flex: 0 0 calc((100% - 64px) / 3);
+    max-width: calc((100% - 64px) / 3);
+  }
+
+  .bloomy-stage-infocards__media {
+    height: 230px;
+  }
+
+  .bloomy-stage-infocards__content {
+    padding: 1.875rem 1.75rem 2rem;
+  }
+
+  .bloomy-stage-infocards__description {
+    max-width: 19ch;
+  }
+}

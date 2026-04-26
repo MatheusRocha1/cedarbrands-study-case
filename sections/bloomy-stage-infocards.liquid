@@ -1,0 +1,159 @@
+{{ 'section-bloomy-stage-infocards.css' | asset_url | stylesheet_tag }}
+
+<div class="section-background bloomy-stage-infocards__background"></div>
+
+<div
+  id="BloomyStageInfocards-{{ section.id }}"
+  class="section section--page-width bloomy-stage-infocards"
+>
+  {% if section.settings.heading != blank %}
+    <h2 class="bloomy-stage-infocards__heading">
+      {{ section.settings.heading | escape }}
+    </h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="bloomy-stage-infocards__list">
+      {% for block in section.blocks %}
+        {% liquid
+          assign fetch_priority = 'auto'
+          assign loading = 'lazy'
+
+          if section.index == 1 and forloop.first
+            assign fetch_priority = 'high'
+            assign loading = 'eager'
+          endif
+        %}
+
+        <article
+          class="bloomy-stage-infocards__card"
+          {{ block.shopify_attributes }}
+        >
+          <div class="bloomy-stage-infocards__media">
+            {% if block.settings.banner_image != blank %}
+              {{
+                block.settings.banner_image
+                | image_url: width: 1600
+                | image_tag:
+                  class: 'bloomy-stage-infocards__image',
+                  widths: '320, 480, 640, 800, 1200, 1600',
+                  sizes: '(min-width: 750px) calc((100vw - 64px) / 3), calc(100vw - 40px)',
+                  loading: loading,
+                  fetchpriority: fetch_priority,
+                  alt: block.settings.banner_image.alt
+              }}
+            {% else %}
+              {{ 'hero-apparel-1' | placeholder_svg_tag: 'bloomy-stage-infocards__image bloomy-stage-infocards__placeholder' }}
+            {% endif %}
+          </div>
+
+          <div class="bloomy-stage-infocards__content">
+            {% if block.settings.title != blank %}
+              <h3 class="bloomy-stage-infocards__card-title">
+                {{ block.settings.title | escape }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.subtitle != blank %}
+              <p class="bloomy-stage-infocards__subtitle">
+                {{ block.settings.subtitle | escape }}
+              </p>
+            {% endif %}
+
+            {% if block.settings.description != blank %}
+              <div class="bloomy-stage-infocards__description">
+                {{ block.settings.description | escape | newline_to_br }}
+              </div>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Bloomy Stage Infocards",
+  "tag": "section",
+  "class": "shopify-section--bloomy-stage-infocards",
+  "max_blocks": 6,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Built for every stage."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "banner_image",
+          "label": "Banner image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Newborn"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "(0-6 months)"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Designed specifically for your baby's precious first months, our Newborn Essentials collection creates the perfect environment for comfort, security, and early development."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bloomy Stage Infocards",
+      "category": "Text",
+      "settings": {
+        "heading": "Built for every stage."
+      },
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "Newborn",
+            "subtitle": "(0-6 months)",
+            "description": "Designed specifically for your baby's precious first months, our Newborn Essentials collection creates the perfect environment for comfort, security, and early development."
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Infant",
+            "subtitle": "(6-12 months)",
+            "description": "Thoughtfully designed for this stage of remarkable physical, cognitive, and social growth, these products evolve with your increasingly mobile and curious child."
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Toddler",
+            "subtitle": "(12-24 months)",
+            "description": "Support your growing explorer during the exciting 12-24 month period with our Toddler Development collection."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

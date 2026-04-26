@@ -1,0 +1,223 @@
+.bloomy-hero-banner {
+  font-family: 'Poppins', var(--font-paragraph--family), sans-serif;
+}
+
+.bloomy-hero-banner__frame {
+  min-height: clamp(40rem, 62vw, 68rem);
+}
+
+.bloomy-hero-banner__media,
+.bloomy-hero-banner__picture,
+.bloomy-hero-banner__overlay,
+.bloomy-hero-banner__inner {
+  position: absolute;
+  inset: 0;
+}
+
+.bloomy-hero-banner__picture {
+  display: block;
+}
+
+.bloomy-hero-banner__image,
+.bloomy-hero-banner__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bloomy-hero-banner__image {
+  object-fit: cover;
+}
+
+.bloomy-hero-banner__placeholder {
+  background: linear-gradient(135deg, #dcc5af 0%, #d2b494 42%, #ad8057 100%);
+}
+
+.bloomy-hero-banner__placeholder,
+.bloomy-hero-banner__placeholder path {
+  fill: rgb(252 245 234 / 0.78);
+}
+
+.bloomy-hero-banner__overlay {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgb(48 30 18 / 0.7) 0%, rgb(48 30 18 / 0.5) 24%, rgb(48 30 18 / 0.16) 50%, rgb(48 30 18 / 0) 74%),
+    linear-gradient(180deg, rgb(20 12 8 / 0.1) 0%, rgb(20 12 8 / 0.26) 100%);
+  pointer-events: none;
+}
+
+.bloomy-hero-banner__inner {
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(2rem, 3vw, 3rem);
+}
+
+.bloomy-hero-banner__content,
+.bloomy-hero-banner__attributes {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloomy-hero-banner__content {
+  align-self: center;
+  align-items: flex-start;
+  max-width: min(38rem, 48%);
+}
+
+.bloomy-hero-banner__badge {
+  display: block;
+  width: clamp(6.5rem, 11vw, 8.75rem);
+  height: auto;
+  margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.bloomy-hero-banner__heading,
+.bloomy-hero-banner__description {
+  margin: 0;
+  color: #fcf5ea;
+}
+
+.bloomy-hero-banner__heading {
+  font-size: 54px;
+  line-height: 0.88;
+  font-weight: 700;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+}
+
+.bloomy-hero-banner__description {
+  max-width: 16ch;
+  margin-top: clamp(1.125rem, 2.2vw, 1.75rem);
+  font-size: clamp(1.65rem, 2.15vw, 2.2rem);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.bloomy-hero-banner__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(1.375rem, 2.7vw, 2rem);
+  padding: 1.1rem 2rem;
+  border-radius: 999px;
+  background: #ff723f;
+  color: #fcf5ea;
+  font-size: clamp(1.35rem, 2vw, 2.15rem);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.bloomy-hero-banner__button:hover {
+  background: #f46633;
+}
+
+.bloomy-hero-banner__attributes {
+  align-items: flex-end;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.bloomy-hero-banner__attribute {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.9rem 1.35rem 0.9rem 1.5rem;
+  border-radius: 999px;
+  background: #fcf5ea;
+  color: #212121;
+  box-shadow: 0 12px 32px rgb(33 33 33 / 0.08);
+}
+
+.bloomy-hero-banner__attribute-label {
+  font-size: clamp(1.15rem, 1.55vw, 1.8rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.bloomy-hero-banner__attribute-icon {
+  display: block;
+  width: clamp(1.25rem, 1.8vw, 1.8rem);
+  height: clamp(1.25rem, 1.8vw, 1.8rem);
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 749px) {
+  .bloomy-hero-banner__frame {
+    min-height: clamp(42rem, 198vw, 62rem);
+    aspect-ratio: 9 / 20;
+  }
+
+  .bloomy-hero-banner__overlay {
+    background:
+      linear-gradient(180deg, rgb(36 20 10 / 0.28) 0%, rgb(36 20 10 / 0.08) 40%, rgb(36 20 10 / 0.32) 100%),
+      linear-gradient(90deg, rgb(48 30 18 / 0.62) 0%, rgb(48 30 18 / 0.32) 38%, rgb(48 30 18 / 0) 76%);
+  }
+
+  .bloomy-hero-banner__inner {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1.375rem 1.5rem;
+  }
+
+  .bloomy-hero-banner__content {
+    align-self: flex-start;
+    max-width: min(19rem, 100%);
+    margin-top: 2.5rem;
+  }
+
+  .bloomy-hero-banner__badge {
+    width: 5.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .bloomy-hero-banner__heading {
+    font-size: 44px;
+    line-height: 0.9;
+  }
+
+  .bloomy-hero-banner__description {
+    max-width: 12ch;
+    margin-top: 0.9rem;
+    font-size: clamp(1.35rem, 7vw, 2rem);
+    line-height: 0.95;
+  }
+
+  .bloomy-hero-banner__button {
+    margin-top: 1.35rem;
+    padding: 0.95rem 1.55rem;
+    font-size: clamp(1.05rem, 6vw, 1.55rem);
+  }
+
+  .bloomy-hero-banner__attributes {
+    gap: 0.75rem;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .bloomy-hero-banner__attribute {
+    padding: 0.7rem 1rem 0.7rem 1.2rem;
+  }
+
+  .bloomy-hero-banner__attribute-label {
+    font-size: clamp(1rem, 4.9vw, 1.45rem);
+  }
+
+  .bloomy-hero-banner__attribute-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

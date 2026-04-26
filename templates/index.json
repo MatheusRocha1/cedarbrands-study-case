@@ -12,10 +12,11 @@
     "bloomy_hero_banner_PAG3zY": {
       "type": "bloomy-hero-banner",
       "blocks": {
-        "attribute_wRBDxJ": {
+        "attribute_QjGwK3": {
           "type": "attribute",
           "settings": {
             "label": "Non-toxic materials",
+            "icon_image": "shopify://shop_images/icon-2.svg",
             "icon_alt": ""
           }
         },
@@ -23,6 +24,7 @@
           "type": "attribute",
           "settings": {
             "label": "Loved by parents",
+            "icon_image": "shopify://shop_images/icon-3.svg",
             "icon_alt": ""
           }
         },
@@ -30,18 +32,22 @@
           "type": "attribute",
           "settings": {
             "label": "Designed for development",
+            "icon_image": "shopify://shop_images/Union.svg",
             "icon_alt": ""
           }
         }
       },
       "block_order": [
-        "attribute_wRBDxJ",
+        "attribute_QjGwK3",
         "attribute_4Nq84B",
         "attribute_URbheH"
       ],
       "name": "Bloomy Hero Banner",
       "settings": {
+        "desktop_image": "shopify://shop_images/ThickSherpa_CottonBabyPlayMat_Sherpa_CottonBabyPlayMat_Lifestyle_34_2.png",
+        "mobile_image": "shopify://shop_images/ThickSherpa_CottonBabyPlayMat_Sherpa_CottonBabyPlayMat_Lifestyle_34_2.png",
         "image_alt": "",
+        "badge_image": "shopify://shop_images/image_8.png",
         "badge_alt": "",
         "heading": "Safe, non-toxic\ntoys designed\nfor real\ndevelopment.",
         "description": "Feel confident about what your\nchild plays with.",
@@ -52,9 +58,10 @@
     "bloomy_stage_infocards_zbVMWb": {
       "type": "bloomy-stage-infocards",
       "blocks": {
-        "card_FKTQMQ": {
+        "card_rc6Vrm": {
           "type": "card",
           "settings": {
+            "banner_image": "shopify://shop_images/image_10.png",
             "title": "Newborn",
             "subtitle": "(0-6 months)",
             "description": "Designed specifically for your baby's precious first months, our Newborn Essentials collection creates the perfect environment for comfort, security, and early development."
@@ -63,6 +70,7 @@
         "card_6CbGjh": {
           "type": "card",
           "settings": {
+            "banner_image": "shopify://shop_images/FrenchLinenDeluxeThickQuiltedBaby_PlayMat_PlayMat_Lifestyle_29_1.png",
             "title": "Infant",
             "subtitle": "(6-12 months)",
             "description": "Thoughtfully designed for this stage of remarkable physical, cognitive, and social growth, these products evolve with your increasingly mobile and curious child."
@@ -71,6 +79,7 @@
         "card_EEDiV4": {
           "type": "card",
           "settings": {
+            "banner_image": "shopify://shop_images/image_9.png",
             "title": "Toddler",
             "subtitle": "(12-24 months)",
             "description": "Support your growing explorer during the exciting 12-24 month period with our Toddler Development collection."
@@ -78,7 +87,7 @@
         }
       },
       "block_order": [
-        "card_FKTQMQ",
+        "card_rc6Vrm",
         "card_6CbGjh",
         "card_EEDiV4"
       ],
@@ -91,6 +100,7 @@
       "type": "bloomy-purposeful-play-banner",
       "name": "Bloomy Purpose Banner",
       "settings": {
+        "image": "shopify://shop_images/img_1.png",
         "image_alt": "",
         "heading": "New to purposeful play?",
         "lead": "Most parents are — and it can feel overwhelming.",

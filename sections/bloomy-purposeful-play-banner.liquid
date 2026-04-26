@@ -56,10 +56,14 @@
       </div>
     {% endif %}
 
-    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+    {% if section.settings.button_label != blank %}
       <a
-        href="{{ section.settings.button_link }}"
         class="bloomy-purposeful-play-banner__button"
+        {% if section.settings.button_link != blank %}
+          href="{{ section.settings.button_link }}"
+        {% else %}
+          aria-disabled="true"
+        {% endif %}
       >
         {{ section.settings.button_label | escape }}
       </a>

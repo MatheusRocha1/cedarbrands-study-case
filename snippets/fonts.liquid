@@ -1,4 +1,6 @@
 {% # theme-check-disable %}
+{%- assign body_font_light = settings.type_body_font | font_modify: 'weight', '300' -%}
+{%- assign body_font_semibold = settings.type_body_font | font_modify: 'weight', '600' -%}
 {%- unless settings.type_body_font.system? -%}
   <link
     rel="preload"
@@ -9,6 +11,26 @@
     fetchpriority="low"
   >
 {%- endunless -%}
+{%- if body_font_light and body_font_light.system? == false -%}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ body_font_light | font_url }}"
+    type="font/woff2"
+    crossorigin
+    fetchpriority="low"
+  >
+{%- endif -%}
+{%- if body_font_semibold and body_font_semibold.system? == false -%}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ body_font_semibold | font_url }}"
+    type="font/woff2"
+    crossorigin
+    fetchpriority="low"
+  >
+{%- endif -%}
 {%- unless settings.type_subheading_font.system? -%}
   <link
     rel="preload"

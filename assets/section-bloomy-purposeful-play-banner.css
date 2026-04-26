@@ -33,10 +33,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.9375rem;
-  padding: 2.5rem 1.75rem;
+  gap: 1.5rem;
+  padding: 2.5rem 1.5rem;
   background-color: #eedcc3;
-  background-image: radial-gradient(circle at center, rgb(255 255 255 / 0.34) 0%, rgb(255 255 255 / 0) 72%);
   color: #212121;
   text-align: center;
   font-family: 'Poppins', var(--font-paragraph--family), sans-serif;
@@ -49,49 +48,41 @@
 }
 
 .bloomy-purposeful-play-banner__heading {
-  max-width: 10ch;
-  font-size: clamp(3rem, 14vw, 3.75rem);
-  line-height: 0.9;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
+  text-align: center;
+  color: #212121;
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 0.8;
 }
 
 .bloomy-purposeful-play-banner__lead {
-  max-width: 16ch;
-  font-size: clamp(1.5rem, 6.5vw, 1.875rem);
-  line-height: 0.94;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
+  font-size: 24px;
+  line-height: 0.9;
+  font-weight: 500;
 }
 
 .bloomy-purposeful-play-banner__body {
-  max-width: 25ch;
-  font-size: clamp(1rem, 3.4vw, 1.125rem);
-  line-height: 1.15;
-  font-weight: 400;
-  text-wrap: balance;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 300;
 }
 
 .bloomy-purposeful-play-banner__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.1875rem;
   padding: 0.8125rem 1.5rem;
-  border-radius: 999px;
+  border-radius: 3.125rem;
   background: #ff723f;
-  color: #fffaf5;
-  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  color: #fcf5ea;
+  font-size: 24px;
   line-height: 1;
-  font-weight: 700;
-  font-family: inherit;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .bloomy-purposeful-play-banner__button:hover {
-  background: #f76531;
+  background: #f46633;
 }
 
 @media screen and (min-width: 750px) {
@@ -106,21 +97,27 @@
 
   .bloomy-purposeful-play-banner__content {
     align-items: flex-start;
-    padding: 3rem clamp(2.5rem, 5vw, 4.5rem);
+    padding: 40px;
     text-align: left;
+    gap: 40px;
   }
 
   .bloomy-purposeful-play-banner__heading {
-    max-width: 9ch;
-    font-size: clamp(3.75rem, 4.8vw, 4.25rem);
+    text-align: left;
+    font-size: 3.75rem;
+    line-height: 0.9;
   }
 
   .bloomy-purposeful-play-banner__lead {
-    max-width: 18ch;
-    font-size: clamp(1.75rem, 2.4vw, 2rem);
+    font-size: 32px;
   }
 
   .bloomy-purposeful-play-banner__body {
-    max-width: 29ch;
+    font-size: 20px;
+  }
+
+  .bloomy-purposeful-play-banner__button {
+    font-size: 2rem;
+    line-height: 0.9;
   }
 }

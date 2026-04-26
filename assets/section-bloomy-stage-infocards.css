@@ -3,8 +3,8 @@
 }
 
 .bloomy-stage-infocards {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 48px;
+  padding-bottom: 48px;
   font-family: var(--font-paragraph--family);
   color: #212121;
 }
@@ -19,18 +19,16 @@
 .bloomy-stage-infocards__heading {
   text-align: center;
   color: #212121;
-  font-size: clamp(2.75rem, 8vw, 4rem);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
-  margin-bottom: 2rem;
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 0.8;
+  margin-bottom: 32px;
 }
 
 .bloomy-stage-infocards__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .bloomy-stage-infocards__card {
@@ -38,12 +36,12 @@
   flex: 1 1 100%;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 2.5rem;
   background: #ffffff;
 }
 
 .bloomy-stage-infocards__media {
-  height: 224px;
+  /* height: 14rem; */
   background: #ead8c4;
 }
 
@@ -68,57 +66,68 @@
   flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
-  padding: 1.875rem 1.5rem 2rem;
+  padding: 30px 24px 32px;
   text-align: center;
 }
 
 .bloomy-stage-infocards__card-title {
   color: #212121;
-  font-size: clamp(2rem, 5vw, 2.25rem);
-  font-weight: 700;
-  line-height: 1;
-  text-wrap: balance;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 .bloomy-stage-infocards__subtitle {
-  margin-top: 0.125rem;
+  margin-top: 2px;
   color: #be783e;
-  font-size: 1.25rem;
-  line-height: 1.1;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .bloomy-stage-infocards__description {
-  margin-top: 0.75rem;
-  max-width: 18ch;
+  margin-top: .625rem;
   color: #212121;
-  font-size: 1.125rem;
-  line-height: 1.12;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 46.875rem) {
   .bloomy-stage-infocards {
-    padding-top: 4rem;
-    padding-bottom: 5rem;
+    padding-top: 64px;
+    padding-bottom: 80px;
   }
 
   .bloomy-stage-infocards__heading {
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
+    font-size: 3.75rem;
+    line-height: 0.9;
+  }
+
+  .bloomy-stage-infocards__card-title {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+
+  .bloomy-stage-infocards__subtitle {
+    font-size: 1.25rem;
   }
 
   .bloomy-stage-infocards__card {
-    flex: 0 0 calc((100% - 64px) / 3);
-    max-width: calc((100% - 64px) / 3);
+    flex: 0 0 calc((100% - 4rem) / 3);
+    max-width: calc((100% - 4rem) / 3);
   }
 
   .bloomy-stage-infocards__media {
-    height: 230px;
+    /* height: 14.375rem; */
   }
 
   .bloomy-stage-infocards__content {
-    padding: 1.875rem 1.75rem 2rem;
+    padding: 30px 28px 32px;
   }
 
   .bloomy-stage-infocards__description {
-    max-width: 19ch;
+    font-size: 1.25rem
   }
 }

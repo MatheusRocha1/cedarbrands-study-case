@@ -3,11 +3,19 @@
     assign rendered_fonts = ''
 
     assign primary_font = settings.type_body_font
+    assign primary_font_light = primary_font | font_modify: 'weight', '300'
+    assign primary_font_semibold = primary_font | font_modify: 'weight', '600'
     assign primary_font_bold = primary_font | font_modify: 'weight', 'bold'
     assign primary_font_italic = primary_font | font_modify: 'style', 'italic'
     assign primary_font_bold_italic = primary_font_bold | font_modify: 'style', 'italic'
 
     assign primary_font_face_id = '[primary_font_family]-[primary_font_weight]-[primary_font_style]|' | replace: '[primary_font_family]', primary_font.family | replace: '[primary_font_weight]', primary_font.weight | replace: '[primary_font_style]', primary_font.style
+    if primary_font_light
+      assign primary_font_light_face_id = '[primary_font_light_family]-[primary_font_light_weight]-[primary_font_light_style]|' | replace: '[primary_font_light_family]', primary_font_light.family | replace: '[primary_font_light_weight]', primary_font_light.weight | replace: '[primary_font_light_style]', primary_font_light.style
+    endif
+    if primary_font_semibold
+      assign primary_font_semibold_face_id = '[primary_font_semibold_family]-[primary_font_semibold_weight]-[primary_font_semibold_style]|' | replace: '[primary_font_semibold_family]', primary_font_semibold.family | replace: '[primary_font_semibold_weight]', primary_font_semibold.weight | replace: '[primary_font_semibold_style]', primary_font_semibold.style
+    endif
     assign primary_font_bold_face_id = '[primary_font_bold_family]-[primary_font_bold_weight]-[primary_font_bold_style]|' | replace: '[primary_font_bold_family]', primary_font_bold.family | replace: '[primary_font_bold_weight]', primary_font_bold.weight | replace: '[primary_font_bold_style]', primary_font_bold.style
     assign primary_font_italic_face_id = '[primary_font_italic_family]-[primary_font_italic_weight]-[primary_font_italic_style]|' | replace: '[primary_font_italic_family]', primary_font_italic.family | replace: '[primary_font_italic_weight]', primary_font_italic.weight | replace: '[primary_font_italic_style]', primary_font_italic.style
     assign primary_font_bold_italic_face_id = '[primary_font_bold_italic_family]-[primary_font_bold_italic_weight]-[primary_font_bold_italic_style]|' | replace: '[primary_font_bold_italic_family]', primary_font_bold_italic.family | replace: '[primary_font_bold_italic_weight]', primary_font_bold_italic.weight | replace: '[primary_font_bold_italic_style]', primary_font_bold_italic.style
@@ -46,6 +54,20 @@
       echo primary_font | font_face: font_display: 'swap'
       assign rendered_fonts = rendered_fonts | append: primary_font_face_id
     endunless
+
+    if primary_font_light
+      unless rendered_fonts contains primary_font_light_face_id
+        echo primary_font_light | font_face: font_display: 'swap'
+        assign rendered_fonts = rendered_fonts | append: primary_font_light_face_id
+      endunless
+    endif
+
+    if primary_font_semibold
+      unless rendered_fonts contains primary_font_semibold_face_id
+        echo primary_font_semibold | font_face: font_display: 'swap'
+        assign rendered_fonts = rendered_fonts | append: primary_font_semibold_face_id
+      endunless
+    endif
 
     unless rendered_fonts contains primary_font_bold_face_id
       echo primary_font_bold | font_face: font_display: 'swap'
@@ -158,6 +180,8 @@
     --font-body--family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
     --font-body--style: {{ settings.type_body_font.style }};
     --font-body--weight: {{ settings.type_body_font.weight }};
+    --font-weight-light: 300;
+    --font-weight-semibold: 600;
     --font-subheading--family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
     --font-subheading--style: {{ settings.type_subheading_font.style }};
     --font-subheading--weight: {{ settings.type_subheading_font.weight }};

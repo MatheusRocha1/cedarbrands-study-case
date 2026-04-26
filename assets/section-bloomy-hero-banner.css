@@ -51,8 +51,9 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
-  padding: clamp(2rem, 3vw, 3rem);
+  padding: 60px;
 }
 
 .bloomy-hero-banner__content,
@@ -62,9 +63,9 @@
 }
 
 .bloomy-hero-banner__content {
-  align-self: center;
+  align-self: flex-start;
   align-items: flex-start;
-  max-width: min(38rem, 48%);
+  max-width: min(38rem, 100%);
 }
 
 .bloomy-hero-banner__badge {
@@ -81,36 +82,32 @@
 }
 
 .bloomy-hero-banner__heading {
-  font-size: 54px;
-  line-height: 0.88;
-  font-weight: 700;
-  letter-spacing: -0.065em;
-  text-wrap: balance;
+  font-size: 60px;
+  line-height: 0.9;
+  font-weight: 600;
 }
 
 .bloomy-hero-banner__description {
-  max-width: 16ch;
+  /* max-width: 16ch; */
   margin-top: clamp(1.125rem, 2.2vw, 1.75rem);
-  font-size: clamp(1.65rem, 2.15vw, 2.2rem);
+  font-size: 28px;
   line-height: 0.95;
   font-weight: 500;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
+  /* letter-spacing: -0.04em; */
 }
 
 .bloomy-hero-banner__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: clamp(1.375rem, 2.7vw, 2rem);
-  padding: 1.1rem 2rem;
-  border-radius: 999px;
+  margin-top: 1.5625rem;
+  padding: .8125rem 1.5rem;
+  border-radius: 3.125rem;
   background: #ff723f;
   color: #fcf5ea;
-  font-size: clamp(1.35rem, 2vw, 2.15rem);
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: 2rem;
+  line-height: 0.9;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -127,21 +124,19 @@
 .bloomy-hero-banner__attribute {
   display: inline-flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: 0.75rem;
   width: fit-content;
   max-width: 100%;
-  padding: 0.9rem 1.35rem 0.9rem 1.5rem;
-  border-radius: 999px;
+  padding: 10px 16px;
+  border-radius: 50px;
   background: #fcf5ea;
   color: #212121;
-  box-shadow: 0 12px 32px rgb(33 33 33 / 0.08);
 }
 
 .bloomy-hero-banner__attribute-label {
-  font-size: clamp(1.15rem, 1.55vw, 1.8rem);
+  font-size: 20px;
   line-height: 1;
   font-weight: 500;
-  letter-spacing: -0.04em;
   white-space: nowrap;
 }
 
@@ -168,14 +163,16 @@
   .bloomy-hero-banner__inner {
     flex-direction: column;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 1.5rem;
-    padding: 2rem 1.375rem 1.5rem;
+    /* padding: 2rem 1.375rem 1.5rem; */
+    padding: 20px;
   }
 
   .bloomy-hero-banner__content {
     align-self: flex-start;
-    max-width: min(19rem, 100%);
+    /* max-width: min(19rem, 100%); */
+    max-width: 100%;
     margin-top: 2.5rem;
   }
 
@@ -186,25 +183,24 @@
 
   .bloomy-hero-banner__heading {
     font-size: 44px;
-    line-height: 0.9;
+    line-height: 0.8;
   }
 
   .bloomy-hero-banner__description {
-    max-width: 12ch;
     margin-top: 0.9rem;
-    font-size: clamp(1.35rem, 7vw, 2rem);
-    line-height: 0.95;
+    font-size: 24px;
+    line-height: 1;
   }
 
   .bloomy-hero-banner__button {
-    margin-top: 1.35rem;
-    padding: 0.95rem 1.55rem;
-    font-size: clamp(1.05rem, 6vw, 1.55rem);
+    margin-top: 1.25rem;
+    font-size: 24px;
+    line-height: 1
   }
 
   .bloomy-hero-banner__attributes {
     gap: 0.75rem;
-    margin-top: auto;
+    /* margin-top: auto; */
     width: 100%;
   }
 
@@ -213,7 +209,8 @@
   }
 
   .bloomy-hero-banner__attribute-label {
-    font-size: clamp(1rem, 4.9vw, 1.45rem);
+    /* font-size: clamp(1rem, 4.9vw, 1.45rem); */
+    font-size: 16px;
   }
 
   .bloomy-hero-banner__attribute-icon {

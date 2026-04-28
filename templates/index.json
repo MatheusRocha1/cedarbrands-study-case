@@ -62,6 +62,7 @@
           "type": "card",
           "settings": {
             "banner_image": "shopify://shop_images/image_10.png",
+            "image_alt": "",
             "title": "Newborn",
             "subtitle": "(0-6 months)",
             "description": "Designed specifically for your baby's precious first months, our Newborn Essentials collection creates the perfect environment for comfort, security, and early development."
@@ -71,6 +72,7 @@
           "type": "card",
           "settings": {
             "banner_image": "shopify://shop_images/FrenchLinenDeluxeThickQuiltedBaby_PlayMat_PlayMat_Lifestyle_29_1.png",
+            "image_alt": "",
             "title": "Infant",
             "subtitle": "(6-12 months)",
             "description": "Thoughtfully designed for this stage of remarkable physical, cognitive, and social growth, these products evolve with your increasingly mobile and curious child."
@@ -80,6 +82,7 @@
           "type": "card",
           "settings": {
             "banner_image": "shopify://shop_images/image_9.png",
+            "image_alt": "",
             "title": "Toddler",
             "subtitle": "(12-24 months)",
             "description": "Support your growing explorer during the exciting 12-24 month period with our Toddler Development collection."
@@ -108,11 +111,107 @@
         "button_label": "SHOP BESTSELLERS",
         "button_link": ""
       }
+    },
+    "bloomy_comparison_table_6ffYzV": {
+      "type": "bloomy-comparison-table",
+      "blocks": {
+        "row_bXdEHn": {
+          "type": "row",
+          "settings": {
+            "category": "Core Purpose",
+            "purposeful_text": "Learning through hands-on exploration",
+            "high_stimulation_text": "Passive entertainment"
+          }
+        },
+        "row_B4RJU3": {
+          "type": "row",
+          "settings": {
+            "category": "Materials",
+            "purposeful_text": "Natural (wood, cotton, metal)",
+            "high_stimulation_text": "Plastic, synthetic materials"
+          }
+        },
+        "row_zLVQcb": {
+          "type": "row",
+          "settings": {
+            "category": "Cognitive Development",
+            "purposeful_text": "Encourages problem solving and creativity",
+            "high_stimulation_text": "Limited interaction patterns"
+          }
+        },
+        "row_jE8QQM": {
+          "type": "row",
+          "settings": {
+            "category": "Creativity",
+            "purposeful_text": "Open-ended play",
+            "high_stimulation_text": "Fixed outcomes"
+          }
+        },
+        "row_DFrxXN": {
+          "type": "row",
+          "settings": {
+            "category": "Engagement Style",
+            "purposeful_text": "Active (child-led play)",
+            "high_stimulation_text": "Passive (toy-led play)"
+          }
+        },
+        "row_yy7Y44": {
+          "type": "row",
+          "settings": {
+            "category": "Motor Skill Development",
+            "purposeful_text": "Develops fine motor skills through hands-on use",
+            "high_stimulation_text": "Often limited to simple actions"
+          }
+        },
+        "row_Jcad4n": {
+          "type": "row",
+          "settings": {
+            "category": "Durability",
+            "purposeful_text": "Long-lasting, multi-use",
+            "high_stimulation_text": "Short lifespan"
+          }
+        },
+        "row_fB6FxD": {
+          "type": "row",
+          "settings": {
+            "category": "Environmental Impact",
+            "purposeful_text": "Eco-friendly materials",
+            "high_stimulation_text": "Higher waste"
+          }
+        },
+        "row_V6EBhF": {
+          "type": "row",
+          "settings": {
+            "category": "Safety",
+            "purposeful_text": "Non-toxic, simple design",
+            "high_stimulation_text": "May include electronics or small parts"
+          }
+        }
+      },
+      "block_order": [
+        "row_bXdEHn",
+        "row_B4RJU3",
+        "row_zLVQcb",
+        "row_jE8QQM",
+        "row_DFrxXN",
+        "row_yy7Y44",
+        "row_Jcad4n",
+        "row_fB6FxD",
+        "row_V6EBhF"
+      ],
+      "name": "Bloomy Comparison Table",
+      "settings": {
+        "heading": "How our toys compare",
+        "category_column_heading": "Category",
+        "purposeful_column_heading": "Our Purposeful Play Toys",
+        "high_stimulation_column_heading": "High-Stimulation / Pre-Programmed Toys"
+      }
     }
   },
   "order": [
     "bloomy_hero_banner_PAG3zY",
     "bloomy_stage_infocards_zbVMWb",
-    "bloomy_purposeful_play_banner_f8rH4W"
+    "bloomy_purposeful_play_banner_f8rH4W",
+    "bloomy_comparison_table_6ffYzV"
   ]
 }
